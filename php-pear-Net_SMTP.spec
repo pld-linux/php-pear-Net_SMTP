@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          Net
-%define         _subclass       SMTP
+%define		_class		Net
+%define		_subclass	SMTP
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
