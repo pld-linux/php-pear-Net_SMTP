@@ -2,12 +2,11 @@
 %define         _class          Net
 %define         _subclass       SMTP
 %define		_status		stable
-
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - implementation of the SMTP protocol
 Summary(pl):	%{_pearname} - implementacja protoko³u SMTP
 Name:		php-pear-%{_pearname}
-Version:	1.0.1
+Version:	1.1.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
@@ -37,7 +36,7 @@ Ta klasa ma w PEAR status: %{_status}.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
-install %{_pearname}-%{version}/%{_class}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}/%{_subclass}.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
