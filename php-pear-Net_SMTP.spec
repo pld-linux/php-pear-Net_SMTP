@@ -1,12 +1,14 @@
 %include	/usr/lib/rpm/macros.php
 %define         _class          Net
 %define         _subclass       SMTP
+%define		_status		stable
+
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - implementation of the SMTP protocol
 Summary(pl):	%{_pearname} - implementacja protoko³u SMTP
 Name:		php-pear-%{_pearname}
-Version:	1.0
-Release:	2
+Version:	1.0.1
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -20,9 +22,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides an implementation of the SMTP protocol using PEAR's
 Net_Socket:: class.
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 Dostarcza implementacjê protoko³u SMTP przy u¿yciu PEAR-owej klasy
 Net_Socket:: .
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
