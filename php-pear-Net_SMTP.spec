@@ -3,15 +3,16 @@
 %define         _subclass       SMTP
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
+
 Summary:	%{_pearname} - implementation of the SMTP protocol
 Summary(pl):	%{_pearname} - implementacja protoko³u SMTP
 Name:		php-pear-%{_pearname}
-Version:	1.2.3
+Version:	1.2.5
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-# Source0-md5:	3c1ee9556bec8184f26bf7b64ce0b80e
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	bf5261ea2477aa1d41c55c2988770d26
 URL:		http://pear.php.net/package/Net_SMTP/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
