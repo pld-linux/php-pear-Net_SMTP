@@ -2,8 +2,8 @@
 %define         _class          Net
 %define         _subclass       SMTP
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_class}_%{_subclass} - implementation of the SMTP protocol
-Summary(pl):	%{_class}_%{_subclass} - implementacja protoko³u SMTP
+Summary:	%{_pearname} - implementation of the SMTP protocol
+Summary(pl):	%{_pearname} - implementacja protoko³u SMTP
 Name:		php-pear-%{_pearname}
 Version:	1.0
 Release:	1
