@@ -8,16 +8,19 @@ Summary:	%{_pearname} - implementation of the SMTP protocol
 Summary(pl):	%{_pearname} - implementacja protoko³u SMTP
 Name:		php-pear-%{_pearname}
 Version:	1.2.7
-Release:	1
+Release:	1.1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	11c4de943b07206aab6193eefd8f328e
 URL:		http://pear.php.net/package/Net_SMTP/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-10.2
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# exclude optional dependencies
+%define		_noautoreq	'pear(Auth/SASL.*)'
 
 %description
 Provides an implementation of the SMTP protocol using PEAR's
@@ -31,18 +34,36 @@ Net_Socket:: .
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Group:		Development
+Requires:	%{name} = %{version}-%{release}
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-
-install %{_pearname}-%{version}/%{_subclass}.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+if [ -f %{_docdir}/%{name}-%{version}/optional-packages.txt ]; then
+	cat %{_docdir}/%{name}-%{version}/optional-packages.txt
+fi
+
 %files
 %defattr(644,root,root,755)
+%doc install.log optional-packages.txt
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/*
