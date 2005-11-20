@@ -3,12 +3,11 @@
 %define		_subclass	SMTP
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - implementation of the SMTP protocol
 Summary(pl):	%{_pearname} - implementacja protoko³u SMTP
 Name:		php-pear-%{_pearname}
 Version:	1.2.7
-Release:	3
+Release:	4
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
