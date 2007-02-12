@@ -4,7 +4,7 @@
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - implementation of the SMTP protocol
-Summary(pl):	%{_pearname} - implementacja protoko≥u SMTP
+Summary(pl.UTF-8):   %{_pearname} - implementacja protoko≈Çu SMTP
 Name:		php-pear-%{_pearname}
 Version:	1.2.8
 Release:	2
@@ -31,15 +31,15 @@ Net_Socket:: class.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Dostarcza implementacjÍ protoko≥u SMTP przy uøyciu PEAR-owej klasy
+%description -l pl.UTF-8
+Dostarcza implementacjƒô protoko≈Çu SMTP przy u≈ºyciu PEAR-owej klasy
 Net_Socket:: .
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -48,7 +48,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
