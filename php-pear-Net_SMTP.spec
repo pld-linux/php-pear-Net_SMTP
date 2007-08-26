@@ -6,13 +6,13 @@
 Summary:	%{_pearname} - implementation of the SMTP protocol
 Summary(pl.UTF-8):	%{_pearname} - implementacja protokołu SMTP
 Name:		php-pear-%{_pearname}
-Version:	1.2.8
-Release:	2
+Version:	1.2.10
+Release:	1
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	acd7c31aa6a083ff6bff86ffba02bcbb
+# Source0-md5:	cd12642ea13e2ec3939688b988fd39c4
 URL:		http://pear.php.net/package/Net_SMTP/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
