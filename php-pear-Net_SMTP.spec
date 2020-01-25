@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		stable
 %define		_pearname	Net_SMTP
 Summary:	%{_pearname} - implementation of the SMTP protocol
